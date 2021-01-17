@@ -1,0 +1,1063 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>744</width>
+    <height>588</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Ignored" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
+  </property>
+  <property name="windowTitle">
+   <string>Tile Map Generator</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="tabPosition">
+       <enum>QTabWidget::North</enum>
+      </property>
+      <property name="tabShape">
+       <enum>QTabWidget::Rounded</enum>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <property name="elideMode">
+       <enum>Qt::ElideNone</enum>
+      </property>
+      <property name="tabsClosable">
+       <bool>false</bool>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Generator</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QFrame" name="frame_4">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="autoFillBackground">
+           <bool>true</bool>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Plain</enum>
+          </property>
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="0" column="0">
+            <layout class="QHBoxLayout" name="horizontalLayout_5">
+             <item>
+              <widget class="QLabel" name="label_2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Height </string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="height">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimum">
+                <number>1</number>
+               </property>
+               <property name="maximum">
+                <number>999999999</number>
+               </property>
+               <property name="value">
+                <number>70</number>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="0" column="1">
+            <layout class="QHBoxLayout" name="horizontalLayout_9">
+             <item>
+              <widget class="QLabel" name="label_3">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Width</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="width">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimum">
+                <number>1</number>
+               </property>
+               <property name="maximum">
+                <number>999999999</number>
+               </property>
+               <property name="value">
+                <number>70</number>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="0" column="2">
+            <layout class="QHBoxLayout" name="horizontalLayout_10">
+             <item>
+              <widget class="QLabel" name="label_4">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Islands density</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="density">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimum">
+                <number>0</number>
+               </property>
+               <property name="maximum">
+                <number>100</number>
+               </property>
+               <property name="value">
+                <number>40</number>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="frame">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="mouseTracking">
+           <bool>true</bool>
+          </property>
+          <property name="autoFillBackground">
+           <bool>true</bool>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Plain</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QPushButton" name="generateButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Generate Map</string>
+             </property>
+             <property name="default">
+              <bool>false</bool>
+             </property>
+             <property name="flat">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="deleteIslandButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Delete Island</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="biomButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Add Bioms</string>
+             </property>
+             <property name="checkable">
+              <bool>false</bool>
+             </property>
+             <property name="checked">
+              <bool>false</bool>
+             </property>
+             <property name="autoRepeat">
+              <bool>false</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>false</bool>
+             </property>
+             <property name="autoDefault">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="deleteBiomButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Delete Bioms</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="saveButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Save Picture</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSplitter" name="splitter">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <widget class="QListWidget" name="islandList">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="mouseTracking">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QStackedWidget" name="stack">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="cursor">
+            <cursorShape>ArrowCursor</cursorShape>
+           </property>
+           <property name="currentIndex">
+            <number>0</number>
+           </property>
+           <widget class="QWidget" name="page">
+            <layout class="QHBoxLayout" name="horizontalLayout">
+             <item>
+              <widget class="QLabel" name="label">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="autoFillBackground">
+                <bool>false</bool>
+               </property>
+               <property name="text">
+                <string>Generate map first</string>
+               </property>
+               <property name="scaledContents">
+                <bool>false</bool>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+               <property name="wordWrap">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="page_2">
+            <layout class="QVBoxLayout" name="verticalLayout_2">
+             <item>
+              <widget class="MapView" name="islandMap"/>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_12">
+          <item>
+           <widget class="QLabel" name="islandInfo">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="mapInfo">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Settings</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_11">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_8">
+          <item>
+           <widget class="QCheckBox" name="highlightCheck">
+            <property name="text">
+             <string>Highlight Island</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_3">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_5">
+             <item>
+              <widget class="QLabel" name="label_5">
+               <property name="text">
+                <string>Water RGB code</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_3">
+               <item>
+                <widget class="QSpinBox" name="waterRBG1">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="buttonSymbols">
+                  <enum>QAbstractSpinBox::NoButtons</enum>
+                 </property>
+                 <property name="maximum">
+                  <number>255</number>
+                 </property>
+                 <property name="value">
+                  <number>10</number>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="waterRBG2">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="buttonSymbols">
+                  <enum>QAbstractSpinBox::NoButtons</enum>
+                 </property>
+                 <property name="maximum">
+                  <number>255</number>
+                 </property>
+                 <property name="value">
+                  <number>65</number>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="waterRBG3">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="buttonSymbols">
+                  <enum>QAbstractSpinBox::NoButtons</enum>
+                 </property>
+                 <property name="maximum">
+                  <number>255</number>
+                 </property>
+                 <property name="value">
+                  <number>148</number>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_5">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_7">
+             <item>
+              <widget class="QLabel" name="label_7">
+               <property name="text">
+                <string>Island RGB code</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_4">
+               <item>
+                <widget class="QSpinBox" name="islandRBG1">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="buttonSymbols">
+                  <enum>QAbstractSpinBox::NoButtons</enum>
+                 </property>
+                 <property name="maximum">
+                  <number>255</number>
+                 </property>
+                 <property name="value">
+                  <number>10</number>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="islandRBG2">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="buttonSymbols">
+                  <enum>QAbstractSpinBox::NoButtons</enum>
+                 </property>
+                 <property name="maximum">
+                  <number>255</number>
+                 </property>
+                 <property name="value">
+                  <number>138</number>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="islandRBG3">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="buttonSymbols">
+                  <enum>QAbstractSpinBox::NoButtons</enum>
+                 </property>
+                 <property name="maximum">
+                  <number>255</number>
+                 </property>
+                 <property name="value">
+                  <number>22</number>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_8">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_8">
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_15">
+               <item>
+                <widget class="QLabel" name="label_12">
+                 <property name="text">
+                  <string>Minimal island surface</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="minIslandSurface">
+                 <property name="minimum">
+                  <number>1</number>
+                 </property>
+                 <property name="maximum">
+                  <number>999999999</number>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_13">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>8</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>if value given here is greater than total islands surface calculated from &quot;island density&quot; only one island will apper with surface corresponding to &quot;islands density&quot;</string>
+                 </property>
+                 <property name="scaledContents">
+                  <bool>false</bool>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="wordWrap">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="biomTermFrame">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_16">
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_14">
+               <item>
+                <widget class="QLabel" name="label_10">
+                 <property name="text">
+                  <string>Minimal island surface to apply biom</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="wordWrap">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="biomTerm">
+                 <property name="minimum">
+                  <number>1</number>
+                 </property>
+                 <property name="maximum">
+                  <number>999999999</number>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_11">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>8</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>value determines on which islands bioms will be generated</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="wordWrap">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QFrame" name="biomListFrame">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_12">
+           <item>
+            <widget class="QLabel" name="biomListLabel">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+               <underline>false</underline>
+              </font>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::NoFrame</enum>
+             </property>
+             <property name="text">
+              <string>Biom List</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QListWidget" name="biomList">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="movement">
+              <enum>QListView::Static</enum>
+             </property>
+             <property name="resizeMode">
+              <enum>QListView::Fixed</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="frame_6">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_13">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_7">
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout_9">
+                  <item>
+                   <widget class="QLabel" name="label_8">
+                    <property name="text">
+                     <string>RGB code</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_6">
+                    <item>
+                     <widget class="QSpinBox" name="biomRBG1">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="buttonSymbols">
+                       <enum>QAbstractSpinBox::NoButtons</enum>
+                      </property>
+                      <property name="maximum">
+                       <number>255</number>
+                      </property>
+                      <property name="value">
+                       <number>0</number>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QSpinBox" name="biomRBG2">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="buttonSymbols">
+                       <enum>QAbstractSpinBox::NoButtons</enum>
+                      </property>
+                      <property name="maximum">
+                       <number>255</number>
+                      </property>
+                      <property name="value">
+                       <number>0</number>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QSpinBox" name="biomRBG3">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="buttonSymbols">
+                       <enum>QAbstractSpinBox::NoButtons</enum>
+                      </property>
+                      <property name="maximum">
+                       <number>255</number>
+                      </property>
+                      <property name="value">
+                       <number>0</number>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout_10">
+                  <item>
+                   <widget class="QLabel" name="newBiomNameLabel">
+                    <property name="text">
+                     <string>biom name</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLineEdit" name="newBiomName">
+                    <property name="cursor">
+                     <cursorShape>IBeamCursor</cursorShape>
+                    </property>
+                    <property name="mouseTracking">
+                     <bool>true</bool>
+                    </property>
+                    <property name="inputMask">
+                     <string/>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="maxLength">
+                     <number>20</number>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                    <property name="placeholderText">
+                     <string/>
+                    </property>
+                    <property name="cursorMoveStyle">
+                     <enum>Qt::VisualMoveStyle</enum>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_11">
+                <item>
+                 <widget class="QSlider" name="biomSliderRGB1">
+                  <property name="maximum">
+                   <number>255</number>
+                  </property>
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="invertedAppearance">
+                   <bool>false</bool>
+                  </property>
+                  <property name="invertedControls">
+                   <bool>false</bool>
+                  </property>
+                  <property name="tickPosition">
+                   <enum>QSlider::NoTicks</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QSlider" name="biomSliderRGB2">
+                  <property name="maximum">
+                   <number>255</number>
+                  </property>
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QSlider" name="biomSliderRGB3">
+                  <property name="maximum">
+                   <number>255</number>
+                  </property>
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QPushButton" name="addBiomPatternButton">
+                <property name="text">
+                 <string>Add new biom pattern</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="deleteBiomPatternButton">
+                <property name="text">
+                 <string>Delete biom pattern</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="changeWaterRGBButton">
+                <property name="text">
+                 <string>Change Water RGB Code</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="changeIslandRGBButton">
+                <property name="text">
+                 <string>Change island RGB Code</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGraphicsView" name="colourDisplay">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>744</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MapView</class>
+   <extends>QGraphicsView</extends>
+   <header>mapview.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
