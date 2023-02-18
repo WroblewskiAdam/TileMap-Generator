@@ -30,6 +30,6 @@ After generating satisfying map you can save it to desired format by clicking *S
 
 # Screenshots
 <p align="center" width="100%">
-<img alt="Example Map" src="./screenshots/Map_1.png" width=800 height= auto>
+<img alt="Example Map" src="./Screenshots/Map_1.png" width=800 height= auto>
 <br>
 
